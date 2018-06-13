@@ -1,7 +1,7 @@
 import * as utils from "utils/utils";
 import * as application from "tns-core-modules/application";
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/distinctUntilChanged';
+// import { Observable } from 'rxjs/Observable';
+// import 'rxjs/add/operator/distinctUntilChanged';
 import {
     HPRTPrinter
 } from "./hprt.common";
@@ -61,12 +61,12 @@ export class Hprt {
             }
             //this.mBluetoothAdapter.enable();
 
-            this.listenToBluetoothEnabled()
+            /*this.listenToBluetoothEnabled()
             .subscribe(enabled => {
                 if(enabled){
                     resolve();
                 }             
-            });
+            });*/
 
 
         });
@@ -369,7 +369,7 @@ export class Hprt {
     }
 
     // Credits: https://www.nativescript.org/blog/controlling-robots-with-nativescript-bluetooth
-    private listenToBluetoothEnabled(): Observable<boolean> {
+    /*private listenToBluetoothEnabled(): Observable<boolean> {
         return new Observable(observer => {
             this.isBluetoothEnabledPromise()
                 .then(enabled => observer.next(enabled))
@@ -385,7 +385,7 @@ export class Hprt {
             return () => clearInterval(intervalHandle);
         })
         .distinctUntilChanged();
-    }
+    }*/
 
 
 
